@@ -2,19 +2,30 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:orientation="horizontal"
+    android:layout_weight="2"
     android:paddingTop="200dp">
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/start_button"
-        android:text="Start Service" />
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:id="@+id/sender"
+        android:layout_height="match_parent" />
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:id="@+id/receiver"
+        android:layout_height="match_parent" />
+<!--    <Button-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/start_button"-->
+<!--        android:text="Start Service" />-->
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/stop_button"
-        android:text="Stop Service" />
+<!--    <Button-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/stop_button"-->
+<!--        android:text="Stop Service" />-->
 
 </LinearLayout>

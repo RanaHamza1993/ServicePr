@@ -3,6 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.brainplow.servicepr">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:name=".utils.App"
         android:allowBackup="true"
@@ -16,8 +20,8 @@
 
         <activity android:name=".activities.BoundServiceActivity" />
 
-        <activity android:name=".activities.MainActivity" />
-        <activity android:name=".activities.MyCustomBroadcastReceiverActivity">
+        <activity android:name=".activities.MyCustomBroadcastReceiverActivity" />
+        <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
