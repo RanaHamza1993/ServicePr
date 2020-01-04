@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.Toast;
 
 import com.brainplow.servicepr.R;
 import com.brainplow.servicepr.fragments.ReceiverFragment;
@@ -57,6 +58,12 @@ public class MainActivity extends AppCompatActivity implements IClickListener {
 
     @Override
     public void onClick(String txt) {
+        if(txt.equalsIgnoreCase("connected")){
+            Toast.makeText(this,"Internet Connected",Toast.LENGTH_SHORT).show();
+        }else{
+            Toast.makeText(this,"Internet notConnected",Toast.LENGTH_SHORT).show();
+
+        }
         ReceiverFragment fragment= (ReceiverFragment) getSupportFragmentManager().findFragmentByTag("receiver");
         fragment.setTextView(txt);
     }
